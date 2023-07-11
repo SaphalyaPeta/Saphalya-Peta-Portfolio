@@ -171,3 +171,9 @@ form .btn2{
     color: white;
     text-decoration: none !important;
 }
+
+.check:hover,
+.check:visited,
+.check:active {
+  color: rgb(170, 107, 228);
+}
