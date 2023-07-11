@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saphalya Peta Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="developer.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(114, 114, 186);
+            font-size: 1.04rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.1px;
+            margin: 20px 54px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 0;
+            margin-top: 100px;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 2rem;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 80%;
+            margin-top: 20px;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        .text-gray {
+            color: grey;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+            position: relative;
+        }
+
+        .secondSection h1 {
+            font-size: 1.7rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+        }
+
+        footer {
+            background-color: rgb(37, 37, 68);
+            height: 75px;
+        }
+        
+        .footer {
+            display: flex;
+            padding: 23px 122px
+        }
+
+        .footer h3{
+            margin-left: 420px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+            <div class="left">Saphalya's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi! I'm <span class="purple">Saphalya Peta</span>
+                <div>and I'm a</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">
+                        <a href="https://drive.google.com/file/d/1UL8rMaSU3XhIZsMY5JT-vvfOaigBaIM2/view?usp=sharing" class="linkb">  My Resume! </a>
+                    </button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="developer.png" alt="">
+            </div>
+        </section>
+
+
+        <section class="secondSection">
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="Pic3.png">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About Me</h1>
+                            <p>
+                                I'm Saphalya Peta, B.Tech 4th year CSE graduate, with comprehensive knowledge and
+                                hands-on experience in Web development, DSA, AI, and ML.
+                                I'm eager to apply my skills and continue my journey towards becoming a skilled and
+                                versatile software engineer.
+                            </p>
+
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('Education')">Education</p>
+                            </div>
+
+                            <div class="tab-contents active-tab" id="Skills">
+                                <ul>
+                                    <li><span><b>Programming Languages:</span></b> C, Python, Java</li>
+                                    <li><span><b>Web Technologies:</span></b> HTML, CSS, JavaScript</li>
+                                    <li><span><b>Tools and Technologies:</span></b> Code Blocks, VS Code, Python Idle,
+                                        PyCharm, SciLab, Git, MySQL, Umbrello,
+                                        Flex,Yacc</li>
+                                    <li><span><b>Coursework:</span></b> Programming for Problem Solving in C, Object
+                                        Oriented Programming In Python, Web
+                                        Technologies, Data Structures and Algorithms, Data Base Management Systems,
+                                        Operating Systems,
+                                        Discrete Mathematics, Digital Logic Design, Computer Networks, Software
+                                        Engineering, Computer
+                                        Architecture and Microprocessor, Artificial Intelligence, Machine Learning,
+                                        Natural Language Processing,
+                                        Software Engineering</li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-contents" id="Experience">
+                                <ul>
+                                    <li><span><b>Software Developer Intern, Panace.ai: </span></b> (Oct 2022- Dec
+                                        2022)<br> Project: Personalised Treatment </li>
+                                    <li><span><b>Industrial Program on Web Development, Raise Digital: </span></b> (Aug
+                                        2022- Sept 2022) <br>
+                                        Project: E-Commerce Website and Advance E-Commerce Website </li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-contents" id="Education">
+                                <ul>
+                                    <li><span><b>Chaitanya Bharathi Institute of Technology, Hyderabad, India:
+                                        </span></b> (2020 - 2024) <br> B.E in Computer Science Engineering GPA: 9.11
+                                    </li>
+                                    <li><span><b>Fiitjee, Hyderabad, India: </span></b> (2017 - 2019) <br> Intermediate
+                                        in MPC Percentage: 95.5</li>
+                                    <li><span><b>St. Joseph's School, Hyderabad, India: </span> </b>(2005 - 2017) <br>
+                                        High School in ICSE Percentage: 91.33
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <div class="layer">
+                            <h3><a href="#">Personalized Healthcare</h3></a>
+                            <p>Prediction of the disease and drug for the given symptoms.<br>
+                                <b>Tech Stack: </b> Python, Tkinter, ML, MongoDb, VS Code<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <div class="layer">
+                            <h3><a href="#">Driver Drowsiness Detection</h3></a>
+                            <p>Detecting the drowsiness of the driver by scanning his/her face.<br>
+                                <b>Tech Stack: </b> Python, OpenCV, Pygame, Dlib, Imutils, Flask, VS Code<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <div class="layer">
+                            <h3><a href="#">Portfolio Website</h3></a>
+                            <p>A portfolio website, a unique way to showcase my skills, work and let others know about me.<br>
+                                <b>Tech Stack: </b> HTML, CSS, JavaScript, VS Code<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <div class="layer">
+                            <h3><a href="https://saphalyapeta.github.io/College-Website/">College Website Clone</h3></a>
+                            <p>Cloned one of the Telangana colleges' website- MGIT.<br>
+                                <b>Tech Stack: </b> HTML, CSS, JavaScript, VS Code<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="work">
+                        <div class="layer">
+                            <h3><a href="https://github.com/SaphalyaPeta/Calculator/blob/main/calci.py">Calculator</h3></a>
+                            <p>Designed a calculator with operations such as Addition, Subtrcation, Multiplication, Division, 
+                                Square, Square-root, Paranthesis Operation.<br>
+                                <b>Tech Stack: </b> Python, Tkinter, VS Code<br>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contactl">
+                        <h1 class="sub-title">Contact me</h1>
+                        <p><img src="gmail.png" width="30" height="30">saphalya.peta023@gmail.com</p>
+                        <p><img src="phone.png" width="30" height="30">+91-7416361655</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/SaphalyaPeta/"><img src="linkedin.png" width="30" height="30"></a>
+                            <a href="https://github.com/SaphalyaPeta"><img src="github.png" width="30" height="30"></a>
+                        </div>
+                    </div>
+                    <div class="contactr">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required><br>
+                            <input type="email" name="email" placeholder="Your email" required><br>
+                            <textarea name="Message" rows="3" placeholder="Your Message"></textarea>
+                            <br>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="first">
+                <h3>
+                    Saphalya's Portfolio
+                </h3>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Problem Solver', 'Web Developer', 'ML Enthusiast', 'AI Enthusiast'],
+            typeSpeed: 50,
+        });
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+</body>
+
+</html>
