@@ -1,366 +1,640 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saphalya Peta Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="developer.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saphalya Peta | Portfolio</title>
 
-        body {
-            background-color: rgb(0, 0, 33);
-            color: white;
-            font-family: 'Poppins', sans-serif;
-        }
+  <link rel="icon" type="image/x-icon" href="developer.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 80px;
-            background-color: rgb(18, 18, 62);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 9999;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0 23px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-
-        nav ul li a:hover {
-            color: rgb(114, 114, 186);
-            font-size: 1.04rem;
-        }
-
-        main hr {
-            border: 0;
-            background: #9c97f1;
-            height: 1.1px;
-            margin: 20px 54px;
-        }
-
-        .left {
-            font-size: 1.5rem;
-        }
-
-        .firstSection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 50px 0;
-            margin-top: 100px;
-        }
-
-        .firstSection>div {
-            width: 30%;
-        }
-
-        .leftSection {
-            font-size: 2rem;
-        }
-
-        .leftSection .btn {
-            padding: 12px;
-            background: #1e2167;
-            color: white;
-            border: 2px solid white;
-            border-radius: 6px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        .rightSection img {
-            width: 80%;
-            margin-top: 20px;
-        }
-
-        .purple {
-            color: rgb(170, 107, 228);
-        }
-
-        .text-gray {
-            color: grey;
-        }
-
-        #element {
-            color: rgb(170, 107, 228);
-        }
-
-        .secondSection {
-            max-width: 80vw;
-            margin: auto;
-            height: 80vh;
-            position: relative;
-        }
-
-        .secondSection h1 {
-            font-size: 1.7rem;
-        }
-
-        .secondSection .box {
-            background: white;
-            width: 80vw;
-            height: 2px;
-            margin: 56px 0;
-        }
-
-        footer {
-            background-color: rgb(37, 37, 68);
-            height: 75px;
-        }
-        
-        .footer {
-            display: flex;
-            padding: 23px 122px
-        }
-
-        .footer h3{
-            margin-left: 420px;
-        }
-    </style>
+  <link rel="stylesheet" href="style_v2.css" />
 </head>
 
 <body>
-    <div id="header">
-        <nav>
-            <div class="left">Saphalya's Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Projects</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
-                </ul>
+  <!-- Top anchor (fixes Back to top + Brand button) -->
+  <a id="top"></a>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Go to top">Saphalya Peta</a>
+
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <p class="eyebrow">Hi, I'm</p>
+          <h1 class="hero-title">Saphalya Peta</h1>
+
+          <p class="hero-subtitle">
+            <span class="muted">MS in Computer Science (Penn State University) • </span>
+            <span id="element"></span>
+          </p>
+
+          <p class="hero-blurb">
+            I am a Master's student in Computer Science at Penn State, graduating in May 2026, actively seeking full-time opportunities.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://drive.google.com/file/d/1yVqxxqdLYep13tNXtLqKswDGlnLl1I1g/view?usp=sharing" target="_blank" rel="noreferrer">Download Resume</a>
+            <a class="btn btn-secondary" href="#projects">View Projects</a>
+          </div>
+
+          <div class="hero-links">
+            <a href="https://www.linkedin.com/in/SaphalyaPeta/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span class="dot">•</span>
+            <a href="https://github.com/SaphalyaPeta" target="_blank" rel="noreferrer">GitHub</a>
+            <span class="dot">•</span>
+            <a href="https://scholar.google.com/citations?hl=en&user=5jGddAEAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+          </div>
+        </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="hero-card">
+            <img src="developer.png" alt="Developer illustration" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-photo">
+            <img src="picture.jpg" alt="Saphalya Peta" />
+          </div>
+
+          <div class="about-content">
+            <p>
+              I'm currently pursuing an MS in Computer Science at The Pennsylvania State University, grduating in
+              May 2026. My interests include Machine Learning, NLP, systems, and software engineering, and building practical software systems with strong engineering fundamentals.
+            </p>
+
+            <p>
+              My experience spans software development, AI/ML, and cloud infrastructure, with internships at CtrlS Cloud4C and Panace.ai, as well as
+              research in AI-text detection and GAN-based human face generation.
+            </p>
+
+            <p>
+              I have strong technical skills in Python, Java, C++, TensorFlow, PyTorch, Hugging Face, SQL, and cloud technologies, and I've applied
+              them to build impactful projects like drowsy driver detection, healthcare prediction tools, and dietary tracking systems. Alongside my
+              technical background, I bring leadership experience from organizing ML seminars and Google Cloud workshops.
+            </p>
+
+            <p>
+              Passionate about solving real-world problems through AI, data-driven systems, and scalable software, I am eager to contribute my skills
+              to innovative teams while continuing to grow as an engineer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section class="section alt" id="resume">
+      <div class="container">
+        <h2 class="section-title">Resume</h2>
+
+        <div class="resume-grid">
+          <div class="card">
+            <h3>Resume</h3>
+
+            <div class="resume-actions">
+              <a class="btn btn-primary"
+                 href="https://drive.google.com/file/d/1yVqxxqdLYep13tNXtLqKswDGlnLl1I1g/view"
+                 target="_blank" rel="noreferrer">
+                Open Resume
+              </a>
+
+              <a class="btn btn-secondary"
+                 href="https://drive.google.com/uc?export=download&id=1yVqxxqdLYep13tNXtLqKswDGlnLl1I1g">
+                Download
+              </a>
             </div>
-        </nav>
+          </div>
+
+          <div class="card resume-preview">
+            <h3>Preview</h3>
+
+            <div class="iframe-wrap" aria-label="Resume preview">
+              <iframe title="Resume PDF"
+                      src="https://drive.google.com/file/d/1yVqxxqdLYep13tNXtLqKswDGlnLl1I1g/preview">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section" id="education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <div class="timeline-role">The Pennsylvania State University, University Park</div>
+              <div class="timeline-org">Master of Science in Computer Science</div>
+              <div class="timeline-date">Aug 2024 - May 2026</div>
+            </div>
+            <ul>
+              <li><strong>GPA:</strong> 3.86/4</li>
+              <li><strong>Coursework:</strong> Machine Learning, Data Structures, Operating Systems, Computer Architecture, Computer Vision, IoT</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <div class="timeline-role">Chaitanya Bharathi Institute of Technology</div>
+              <div class="timeline-org">Bachelor of Engineering in Computer Science and Engineering</div>
+              <div class="timeline-date">Aug 2020 - May 2024</div>
+            </div>
+            <ul>
+              <li><strong>GPA:</strong> 3.68/4</li>
+              <li><strong>Coursework:</strong> Algorithms, Artificial Intelligence, Machine Learning, Deep Learning, Computer Networks, DBMS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <div class="timeline-role">Graduate Teaching Assistant</div>
+              <div class="timeline-org">Penn State University</div>
+              <div class="timeline-date">Aug 2024 - Present</div>
+            </div>
+            <ul>
+              <li>Lead weekly recitations for 150+ students in C++ and Matlab, boosting average quiz scores by 10% and improving course pass rates.</li>
+              <li>Design and deliver supplemental coding exercises, earning a 4.7/5 feedback rating and increasing assignment completion rates by 15%.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <div class="timeline-role">Associate Engineer Intern</div>
+              <div class="timeline-org">CtrlS Cloud4C</div>
+              <div class="timeline-date">Feb 2024 - May 2024</div>
+            </div>
+            <ul>
+              <li>Improved and maintained 95% service uptime by resolving 50+ infrastructure tickets weekly across Linux/Windows servers, virtualization, and network security.</li>
+              <li>Streamlined diagnostics with a 20-member team, reducing average resolution time by 15% and preventing ~20 downtime hours/month.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-meta">
+              <div class="timeline-role">Software Developer Intern</div>
+              <div class="timeline-org">Panace.ai</div>
+              <div class="timeline-date">Dec 2022 - Jul 2023</div>
+            </div>
+            <ul>
+              <li>Built a healthcare prediction tool (Python, MongoDB, Decision Trees, Random Forest) achieving 92% accuracy for improved outcome forecasting.</li>
+              <li>Implemented an InceptionV3 CNN for food image classification (90% accuracy), supporting a dietary tracking feature and improving user engagement by 15%.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section alt" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="grid cards-2">
+          <article class="card">
+            <h3>AI-Text Detection System (RoBERTa)</h3>
+            <p>
+              RoBERTa-based classifier to distinguish human vs LLM-generated text with
+              75% validation accuracy.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/AI-Text-Detection-System"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Multi-Agent Knowledge Navigator</h3>
+            <p>
+              Multi-agent workflow for retrieval and synthesis across sources, designed for robust knowledge
+              navigation and task execution.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/Multi-Agent-Knowledge-Navigator"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Natural Language Terminal</h3>
+            <p>
+              Natural-language interface for terminal operations to execute commands safely and return structured
+              outputs for agent workflows.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/Natural-Language-Terminal"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Intelligent Human Assistant</h3>
+            <p>
+              An assistant system that combines tools, automation, and retrieval to support real tasks end-to-end.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/Intelligent-Human-Assistant"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Multimodal Knowledge Assistant</h3>
+            <p>
+              Multimodal assistant with document understanding and retrieval to answer questions grounded in user-provided sources.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/Multimodal-Knowledge-Assistant"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Agentic Computer Interaction with Vision and Speech</h3>
+            <p>
+              Agentic UI automation using vision/OCR-style interaction plus speech/voice control for hands-free task execution.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/Agentic-Computer-Interaction-with-Vision-and-Speech"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Memory Allocator</h3>
+            <p>
+              Custom memory allocator implementation focused on efficiency, fragmentation control, and performance.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/Memory-Allocator"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Thread Scheduler</h3>
+            <p>
+              CPU scheduling simulation / thread scheduler project focusing on policy design and performance evaluation.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/Thread-Scheduler"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Virtual Memory Manager</h3>
+            <p>
+              Virtual memory manager with page table/TLB simulation and page replacement strategies for realistic OS behavior.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/Virtual-Memory-Manager"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Drowsy Driver Detection</h3>
+            <p>
+              Real-time drowsiness detection system using computer vision with 95% accuracy.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/DriverDrowsy-Detection"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Food Image Classification</h3>
+            <p>
+              Food image classification using deep learning (InceptionV3) with 90% accuracy to support dietary tracking.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/Food-Image-Classification"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Human Face Generation</h3>
+            <p>
+              Human face generation using a Conditional GAN for synthetic image creation and controlled generation.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/Human-Face-Generation"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Healthcare Prediction Tool</h3>
+            <p>
+              Healthcare prediction tool using machine learning with 92% accuracy for outcome/risk prediction workflows.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/Healthcare-Prediction-Tool"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Swiggy Clone</h3>
+            <p>
+              Frontend web clone project replicating core UI flows of a food delivery app for practice in modern web development.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/Swiggy-clone"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>College Website</h3>
+            <p>
+              Responsive college website project showcasing structured multi-page layout, navigation, and clean UI design.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/College-Website"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Calculator</h3>
+            <p>
+              Calculator application implementing core arithmetic operations with a clean, minimal interface.
+            </p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://github.com/SaphalyaPeta/Calculator"
+                 target="_blank" rel="noreferrer">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section class="section" id="publications">
+      <div class="container">
+        <h2 class="section-title">Publications</h2>
+
+        <div class="grid cards-2">
+          <article class="card">
+            <h3>Google Scholar</h3>
+            <p class="muted">For full publication list and citation metrics, view here:</p>
+            <div class="card-actions">
+              <a class="btn btn-secondary"
+                 href="https://scholar.google.com/citations?hl=en&user=5jGddAEAAAAJ"
+                 target="_blank" rel="noreferrer">
+                Google Scholar Profile
+              </a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Few Technical Publications</h3>
+
+            <ol class="pub-list">
+              <li class="pub-item">
+                <a class="pub-link"
+                   href="https://computerresearch.org/index.php/computer/article/view/102316"
+                   target="_blank" rel="noreferrer">Journey of artificial intelligence Frontier: A comprehensive overview</a>
+              </li>
+
+              <li class="pub-item">
+                <a class="pub-link"
+                   href="https://wireilla.com/papers/ijpla/V12N4/12422ijpla01.pdf"
+                   target="_blank" rel="noreferrer">Python- An appetite for the software industry</a>
+              </li>
+
+              <li class="pub-item">
+                <a class="pub-link"
+                   href="https://computerresearch.org/index.php/computer/article/view/101453"
+                   target="_blank" rel="noreferrer">C Programming Language- Still Ruling the World</a>
+              </li>
+
+              <li class="pub-item">
+                <a class="pub-link"
+                   href="https://ieeexplore.ieee.org/document/10544743"
+                   target="_blank" rel="noreferrer">A Review on the Human Face Generation Approaches</a>
+              </li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section alt" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="grid cards-3">
+          <article class="card">
+            <h3>Programming</h3>
+            <p>Python, C, Java, C++, Matlab, R</p>
+          </article>
+
+          <article class="card">
+            <h3>Data / Databases</h3>
+            <p>Pandas, NumPy, Data Analysis, Data Visualization, SQL, MongoDB</p>
+          </article>
+
+          <article class="card">
+            <h3>ML / AI & LLM Systems</h3>
+            <p>Scikit-learn, TensorFlow, PyTorch, Hugging Face, NLP, GANs, Deep Learning, LLMs, Prompting, RAG, Vector Stores</p>
+          </article>
+
+          <article class="card">
+            <h3>Automation / Vision</h3>
+            <p>OCR, OpenCV, Agentic UI Automation, Speech/Voice Commands</p>
+          </article>
+
+          <article class="card">
+            <h3>Systems / OS</h3>
+            <p>Concurrency, Synchronization, pthreads, CPU Scheduling, Memory Allocation, Virtual Memory, SIGSEGV/mprotect, Page Replacement, Linux</p>
+          </article>
+
+          <article class="card">
+            <h3>Cloud / Web / Tools</h3>
+            <p>Hybrid Cloud, Virtualization, Network Security, Model Deployment, Zabbix, HTML, CSS, JavaScript, Flask, Git, GitHub, VS Code, Google Colab</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section alt" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <p class="contact-line">
+              <img src="gmail.png" width="22" height="22" alt="" />
+              <a href="mailto:saphalya.peta023@gmail.com">saphalya.peta023@gmail.com</a>
+            </p>
+
+            <p class="contact-line">
+              <img src="phone.png" width="22" height="22" alt="" />
+              <a href="tel:+18142803243">+1 (814) 280-3243</a>
+            </p>
+
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/SaphalyaPeta/" target="_blank" rel="noreferrer">
+                <img src="linkedin.png" width="28" height="28" alt="LinkedIn" />
+              </a>
+              <a href="https://github.com/SaphalyaPeta" target="_blank" rel="noreferrer">
+                <img src="github.png" width="28" height="28" alt="GitHub" />
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3 style="margin: 0 0 10px;">Let's connect!</h3>
+            <p class="muted" style="margin: 0 0 10px;">
+              Open to research collaborations, full time roles in ML, Systems.
+            </p>
+            <p style="margin: 0;">
+              Best way to reach me is through<strong> email</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Saphalya Peta</p>
+      <a href="#top" class="back-to-top">Back to top ↑</a>
     </div>
+  </footer>
 
-    <main>
-        <section class="firstSection">
-            <div class="leftSection">
-                Hi! I'm <span class="purple">Saphalya Peta</span>
-                <div>and I'm a</div>
-                <span id="element"></span>
-                <div class="buttons">
-                    <button class="btn">
-                        <a href="https://drive.google.com/file/d/1UL8rMaSU3XhIZsMY5JT-vvfOaigBaIM2/view?usp=sharing" class="linkb">  My Resume! </a>
-                    </button>
-                </div>
-            </div>
-            <div class="rightSection">
-                <img src="developer.png" alt="">
-            </div>
-        </section>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
+  <script>
+    // Typed headline
+    new Typed('#element', {
+      strings: ['Software Engineering', 'Machine Learning', 'Systems', 'NLP', 'AI'],
+      typeSpeed: 45,
+      backSpeed: 18,
+      backDelay: 1200,
+      loop: true
+    });
 
-        <section class="secondSection">
-            <div id="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="about-col-1">
-                            <img src="Pic3.png">
-                        </div>
-                        <div class="about-col-2">
-                            <h1 class="sub-title">About Me</h1>
-                            <p>
-                                I'm Saphalya Peta, B.Tech 4th year CSE graduate, with comprehensive knowledge and
-                                hands-on experience in Web development, DSA, AI, and ML.
-                                I'm eager to apply my skills and continue my journey towards becoming a skilled and
-                                versatile software engineer.
-                            </p>
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-                            <div class="tab-titles">
-                                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                                <p class="tab-links" onclick="opentab('Experience')">Experience</p>
-                                <p class="tab-links" onclick="opentab('Education')">Education</p>
-                            </div>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
 
-                            <div class="tab-contents active-tab" id="Skills">
-                                <ul>
-                                    <li><span><b>Programming Languages:</span></b> C, Python, Java</li>
-                                    <li><span><b>Web Technologies:</span></b> HTML, CSS, JavaScript</li>
-                                    <li><span><b>Tools and Technologies:</span></b> Code Blocks, VS Code, Python Idle,
-                                        PyCharm, SciLab, Git, MySQL, Umbrello,
-                                        Flex,Yacc</li>
-                                    <li><span><b>Coursework:</span></b> Programming for Problem Solving in C, Object
-                                        Oriented Programming In Python, Web
-                                        Technologies, Data Structures and Algorithms, Data Base Management Systems,
-                                        Operating Systems,
-                                        Discrete Mathematics, Digital Logic Design, Computer Networks, Software
-                                        Engineering, Computer
-                                        Architecture and Microprocessor, Artificial Intelligence, Machine Learning,
-                                        Natural Language Processing,
-                                        Software Engineering</li>
-                                </ul>
-                            </div>
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      links.classList.toggle('open');
+    });
 
-                            <div class="tab-contents" id="Experience">
-                                <ul>
-                                    <li><span><b>Software Developer Intern, Panace.ai: </span></b> (Oct 2022- Dec
-                                        2022)<br> Project: Personalised Treatment </li>
-                                    <li><span><b>Industrial Program on Web Development, Raise Digital: </span></b> (Aug
-                                        2022- Sept 2022) <br>
-                                        Project: E-Commerce Website and Advance E-Commerce Website </li>
-                                </ul>
-                            </div>
-
-                            <div class="tab-contents" id="Education">
-                                <ul>
-                                    <li><span><b>Chaitanya Bharathi Institute of Technology, Hyderabad, India:
-                                        </span></b> (2020 - 2024) <br> B.E in Computer Science Engineering GPA: 9.11
-                                    </li>
-                                    <li><span><b>Fiitjee, Hyderabad, India: </span></b> (2017 - 2019) <br> Intermediate
-                                        in MPC Percentage: 95.5</li>
-                                    <li><span><b>St. Joseph's School, Hyderabad, India: </span> </b>(2005 - 2017) <br>
-                                        High School in ICSE Percentage: 91.33
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <div id="portfolio">
-            <div class="container">
-                <h1 class="sub-title">My Projects</h1>
-                <div class="work-list">
-                    <div class="work">
-                        <div class="layer">
-                            <h3><a href="#" class="check">Personalized Healthcare</h3></a>
-                            <p>Prediction of the disease and drug for the given symptoms.<br>
-                                <b>Tech Stack: </b> Python, Tkinter, ML, MongoDb, VS Code<br>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="work">
-                        <div class="layer">
-                            <h3><a href="#" class="check">Driver Drowsiness Detection</h3></a>
-                            <p>Detecting the drowsiness of the driver by scanning his/her face.<br>
-                                <b>Tech Stack: </b> Python, OpenCV, Pygame, Dlib, Imutils, Flask, VS Code<br>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="work">
-                        <div class="layer">
-                            <h3><a href="#" class="check">Portfolio Website</h3></a>
-                            <p>A portfolio website, a unique way to showcase my skills, work and let others know about me.<br>
-                                <b>Tech Stack: </b> HTML, CSS, JavaScript, VS Code<br>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="work">
-                        <div class="layer">
-                            <h3><a href="https://saphalyapeta.github.io/College-Website/" class="check">College Website Clone</h3></a>
-                            <p>Cloned one of the Telangana colleges' website- MGIT.<br>
-                                <b>Tech Stack: </b> HTML, CSS, JavaScript, VS Code<br>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="work">
-                        <div class="layer">
-                            <h3><a href="https://github.com/SaphalyaPeta/Calculator/blob/main/calci.py" class="check">Calculator</h3></a>
-                            <p>Designed a calculator with operations such as Addition, Subtrcation, Multiplication, Division, 
-                                Square, Square-root, Paranthesis Operation.<br>
-                                <b>Tech Stack: </b> Python, Tkinter, VS Code<br>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contactl">
-                        <h1 class="sub-title">Contact me</h1>
-                        <p><img src="gmail.png" width="30" height="30">saphalya.peta023@gmail.com</p>
-                        <p><img src="phone.png" width="30" height="30">+91-7416361655</p>
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/SaphalyaPeta/"><img src="linkedin.png" width="30" height="30"></a>
-                            <a href="https://github.com/SaphalyaPeta"><img src="github.png" width="30" height="30"></a>
-                        </div>
-                    </div>
-                    <div class="contactr">
-                        <form>
-                            <input type="text" name="Name" placeholder="Your Name" required><br>
-                            <input type="email" name="email" placeholder="Your email" required><br>
-                            <textarea name="Message" rows="3" placeholder="Your Message"></textarea>
-                            <br>
-                            <button type="submit" class="btn btn2">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer">
-            <div class="first">
-                <h3>
-                    Saphalya's Portfolio
-                </h3>
-    </footer>
-
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <!-- Setup and start animation! -->
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['Problem Solver', 'Web Developer', 'ML Enthusiast', 'AI Enthusiast'],
-            typeSpeed: 50,
-        });
-
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-    </script>
-
+    // Close menu after clicking a link (mobile)
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
 </body>
-
 </html>
